@@ -42,4 +42,14 @@
         }
         
     });
+    //add a button to copy the input field value to the clipboard
+    var button = document.createElement("button");
+    button.innerHTML = "Verwendungszweck kopieren";
+    button.classList = "button ui-button ui-corner-all ui-widget";
+    button.addEventListener("click", function () {
+        navigator.clipboard.writeText("ACLS Reperatur: " + plate.value);
+    });
+    plate.parentElement.appendChild(button);
+
+    
 })();
